@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- `/media` gemount in de container, zodat netwerkopslag (bijv. `/media/Hetzner`) bereikbaar is
+
 ## 1.0.0
 
 - Eerste release

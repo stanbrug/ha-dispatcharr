@@ -1,5 +1,5 @@
 name: Dispatcharr
-version: "1.0.0"
+version: "1.0.1"
 slug: dispatcharr
 description: IPTV stream, EPG and VOD management with Dispatcharr
 url: https://github.com/dispatcharr/dispatcharr
@@ -16,6 +16,7 @@ ports_description:
 webui: "http://[HOST]:[PORT:9191]"
 map:
   - share:rw
+  - media:rw
 options:
   log_level: info
 schema:

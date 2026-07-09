@@ -33,9 +33,14 @@ De streams die Dispatcharr uitserveert (M3U/EPG-URL's voor je mediaspeler) lopen
 http://<home-assistant-ip>:9191/output/m3u
 ```
 
-## Lokale bestanden
+## Lokale bestanden en netwerkopslag
 
-De Home Assistant `/share`-map is beschikbaar in de container. Zet lokale M3U- of EPG-bestanden bijvoorbeeld in `/share/dispatcharr/` en verwijs er in de Dispatcharr-webinterface naar via dat pad.
+Twee Home Assistant-mappen zijn beschikbaar in de container:
+
+- **`/share`** — handig voor lokale M3U- of EPG-bestanden, bijv. `/share/dispatcharr/`.
+- **`/media`** — hier verschijnt ook netwerkopslag die je via **Instellingen → Systeem → Opslag** hebt toegevoegd. Een netwerkschijf met de naam *Hetzner* is in de container dus bereikbaar als `/media/Hetzner`.
+
+Verwijs in de Dispatcharr-webinterface naar deze paden om de bestanden te gebruiken.
 
 ## Eerste start
 
