@@ -2,3 +2,18 @@ configuration:
   log_level:
     name: Logniveau
     description: Hoe uitgebreid de logregels van Dispatcharr zijn.
+  cifs_mount:
+    name: CIFS-share mounten
+    description: Mount een netwerkschijf in de add-on met schrijftoegang voor Dispatcharr (op /mnt/remote).
+  cifs_host:
+    name: CIFS-host
+    description: Hostnaam van de share, bijv. uXXXXXX.your-storagebox.de voor een Hetzner Storage Box.
+  cifs_share:
+    name: CIFS-sharenaam
+    description: Naam van de share ("backup" bij een Hetzner Storage Box).
+  cifs_username:
+    name: CIFS-gebruikersnaam
+    description: Gebruikersnaam voor de share.
+  cifs_password:
+    name: CIFS-wachtwoord
+    description: Wachtwoord voor de share.

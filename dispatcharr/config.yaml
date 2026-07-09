@@ -1,5 +1,5 @@
 name: Dispatcharr
-version: "1.0.1"
+version: "1.1.0"
 slug: dispatcharr
 description: IPTV stream, EPG and VOD management with Dispatcharr
 url: https://github.com/dispatcharr/dispatcharr
@@ -17,7 +17,24 @@ webui: "http://[HOST]:[PORT:9191]"
 map:
   - share:rw
   - media:rw
+# SYS_ADMIN + apparmor off are required to mount a CIFS share inside the
+# container (Home Assistant's own network storage mounts are root-only,
+# which Dispatcharr — running as UID 1000 — cannot write to).
+privileged:
+  - SYS_ADMIN
+  - DAC_READ_SEARCH
+apparmor: false
 options:
   log_level: info
+  cifs_mount: false
+  cifs_host: ""
+  cifs_share: backup
+  cifs_username: ""
+  cifs_password: ""
 schema:
   log_level: list(debug|info|warning|error)
+  cifs_mount: bool
+  cifs_host: str?
+  cifs_share: str?
+  cifs_username: str?
+  cifs_password: password?
