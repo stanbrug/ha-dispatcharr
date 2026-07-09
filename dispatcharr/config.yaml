@@ -1,0 +1,22 @@
+name: Dispatcharr
+version: "1.0.0"
+slug: dispatcharr
+description: IPTV stream, EPG and VOD management with Dispatcharr
+url: https://github.com/dispatcharr/dispatcharr
+arch:
+  - amd64
+  - aarch64
+init: false
+startup: services
+boot: auto
+ports:
+  9191/tcp: 9191
+ports_description:
+  9191/tcp: Dispatcharr web interface
+webui: "http://[HOST]:[PORT:9191]"
+map:
+  - share:rw
+options:
+  log_level: info
+schema:
+  log_level: list(debug|info|warning|error)

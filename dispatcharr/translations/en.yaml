@@ -1,0 +1,4 @@
+configuration:
+  log_level:
+    name: Log level
+    description: The verbosity of Dispatcharr's log output.

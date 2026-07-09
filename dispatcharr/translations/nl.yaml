@@ -1,0 +1,4 @@
+configuration:
+  log_level:
+    name: Logniveau
+    description: Hoe uitgebreid de logregels van Dispatcharr zijn.
